@@ -28,6 +28,7 @@ export default async function sendOrderEmail(context, order, action) {
     action,
     dataForEmail,
     fromShop: dataForEmail.shop,
+    from: order && order.customFields ? order.customFields.fromEmail : null,
     language,
     to
   });

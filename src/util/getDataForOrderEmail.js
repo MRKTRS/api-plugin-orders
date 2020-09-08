@@ -190,6 +190,7 @@ export default async function getDataForOrderEmailDefault(context, { order }) {
         userCurrency
       )
     },
+    fromEmail: order && order.customFields ? order.customFields.fromEmail : null,
     combinedItems,
     contactEmail: shop.emails[0].address,
     copyrightDate,
